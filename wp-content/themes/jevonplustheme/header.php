@@ -1,23 +1,64 @@
-﻿<!doctype html>
-<html>
-<head>
-<meta charset="gbk">
-<title>首页_Jevonplus个人博客</title>
-<meta name="description" content="Jevonplus的个人博客，记录我的程序人生" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<?php
+?><!DOCTYPE html>
 
-<body>
+<html class="no-js" <?php language_attributes(); ?>>
 
-<header class="header-navigation" id="header">
-    <h2 id="mnavh"><span class="navicon"></span></h2>
+	<head>
+
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<title>Jevonplus 的博客</title>
+
+	</head>
+
+	<body <?php body_class(); ?>>
+
+	<div>
+		<style>
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li
+{
+    float:left;
+    border-right: 1px solid #bbb;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li:last-child {
+    border-right: none;
+}
+.active {
+    background-color: #4CAF50;
+}
+/*鼠标移动到选项上修改背景颜色 */
+li a:hover {
+    background-color: #111;
+}
+a
+{
+    display:block;
+    width:60px;
+}
+
+	</style>
     <ul id="starlist">
-      <li><a href="index.html">网站首页</a></li>
-      <li><a href="share.html">我的相册</a></li>
-      <li><a href="list.html">我的日记</a></li>
-      <li><a href="about.html">关于我</a></li>
-      <li><a href="gbook.html">留言</a></li>
-      <li><a href="info.html">内容页</a></li>
-      <li><a href="infopic.html">内容页</a></li>
+      <li><a href="index.php">首页</a></li>
+      <li><a href="share.php">相册</a></li>
+      <li><a href="list.php">博文</a></li>
+      <li><a href="about.php">关于</a></li>
+      <li><a href="gbook.php">留言</a></li>
     </ul>
-</header>
+    <div>
