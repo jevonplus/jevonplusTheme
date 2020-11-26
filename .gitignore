@@ -6,6 +6,7 @@
 /wp-blog-header.php
 /wp-comments-post.php
 /wp-config-sample.php
+/wp-content/themes/*
 !/wp-content/themes/jevonplustheme
 /wp-cron.php
 /wp-includes/
