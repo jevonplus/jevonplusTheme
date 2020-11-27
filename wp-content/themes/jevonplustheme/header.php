@@ -8,11 +8,10 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 		<title>Jevonplus 的博客</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>" type="text/css" />
 	</head>
 
 	<body <?php body_class(); ?>>
-
 	<div>
     <ul id="starlist">
       <li><a href="index.php">首页</a></li>

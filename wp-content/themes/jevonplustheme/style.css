@@ -11,8 +11,8 @@ This is my first time to develop a Wordpress theme,I use it for my Blog.
 */
 body
 {
-	background-image:url('images/background.jpg');
-	background-color:#cccccc;
+	background-image:url('assets/images/background.jpg');
+	background-color:#21759b;
 }
 ul {
     list-style-type: none;
