@@ -1,8 +1,36 @@
 <?php
-?>
-			<footer id="site-footer" role="contentinfo" class="header-footer-group">
-<p>Design by <a href="http://www.jevonplus.cn" target="_blank">Jevonplus个人博客</a> <a href="http://beian.miit.gov.cn/">京ICP备2020041729号-1</a></p>
-			</footer><!-- #site-footer -->
+/**
+ * The template for displaying the 404 template in the jevonplus theme.
+ *
+ * @package WordPress
+ * @subpackage jevonplus theme
+ */
 
-	</body>
-</html>
+get_header();
+?>
+
+<main id="site-content" role="main">
+
+	<div class="section-inner thin error404-content">
+
+		<h1 class="entry-title"><?php _e( 'Page Not Found', 'jevonplus' ); ?></h1>
+
+		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'twentytwenty' ); ?></p></div>
+
+		<?php
+		get_search_form(
+			array(
+				'label' => __( '404 not found', 'jevonplus' ),
+			)
+		);
+		?>
+
+	</div><!-- .section-inner -->
+
+</main><!-- #site-content -->
+
+<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+
+<?php
+get_footer();
+

@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>" type="text/css" />
-<?php wp_head(); ?>
-</head>
+<?php get_header(); ?>
 <body>
-    <ul id="starlist">
-      <li><a href="index.php">首页</a></li>
-      <li><a href="share.php">相册</a></li>
-      <li><a href="list.php">博文</a></li>
-      <li><a href="about.php">关于</a></li>
-      <li><a href="gbook.php">留言</a></li>
-    </ul>
-<?php wp_footer(); ?>
-<p>Design by <a href="http://www.jevonplus.cn" target="_blank">Jevonplus个人博客</a> <a href="http://beian.miit.gov.cn/">京ICP备2020041729号-1</a></p>
-			</footer><!-- #site-footer -->
+<h1><?php bloginfo( 'name' ); ?></h1>
+<h2><?php bloginfo( 'description' ); ?></h2>
+ 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+ 
+<h3><?php the_title(); ?></h3>
+ 
+<?php the_content(); ?>
+<?php wp_link_pages(); ?>
+<?php edit_post_link(); ?>
+ 
+<?php endwhile; ?>
+ 
+<?php
+if ( get_next_posts_link() ) {
+next_posts_link();
+}
+?>
+<?php
+if ( get_previous_posts_link() ) {
+previous_posts_link();
+}
+?>
+<?php endif; ?>
+<?php get_footer(); ?>
 </body>
 </html>
